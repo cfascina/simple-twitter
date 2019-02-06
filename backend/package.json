@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "A simple Tweeter application with NodeJS, ReactJS and React Native.",
+  "description": "A simple Twitter application with NodeJS, ReactJS and React Native.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
