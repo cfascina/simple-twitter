@@ -13,24 +13,28 @@ export default class Login extends Component {
   state = {
     userName: ''
   }
+
   handleUserName = (text) => {
     this.setState({userName: text});
   }
+
   handleSubmit = async() => {
     const {userName} = this.state;
 
     if(!userName.length) return;
 
     await AsyncStorage.setItem('@simpleTwitter:userName', userName);
-    this.props.navigation.navigate('TimelinePage');
+    this.props.navigation.navigate('App');
   }
+
   async componentDidMount() {
     const userName = await AsyncStorage.getItem('@simpleTwitter:userName');
 
     if(userName) {
-      this.props.navigation.navigate('TimelinePage');
+      this.props.navigation.navigate('App');
     }
   }
+  
   render() {
     return(
       <KeyboardAvoidingView behavior="padding" style={styles.container}>

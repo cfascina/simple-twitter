@@ -5,11 +5,15 @@ import {
 
 import LoginPage from './pages/Login';
 import TimelinePage from './pages/Timeline';
+import NewTweetPage from './pages/NewTweet';
 
 const Routes = createAppContainer(
   createSwitchNavigator({
     LoginPage,
-    TimelinePage
+    App: createStackNavigator({
+      TimelinePage,
+      NewTweetPage
+    })
   })
 );
 
